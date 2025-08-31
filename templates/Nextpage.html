@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+    }
+    nav {
+      background: #fff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a, nav button {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav a:hover, nav button:hover {
+      color: #4CAF50;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      margin: 50px auto;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+     .button {
+      width: 60%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="developer.html">Vision</a>
+    <a href="blog.html">Mission</a>
+    <a href="contact.html">Contact</a>
+    <a href="registration.html">Register</a>
+    <button onclick="logout()">Log Out</button>
+  </nav>
+
+  <!-- Main Card -->
+  <div class="card">
+    <h1 id="welcomeText">Welcome to the Next Page 🎉</h1>
+    <p>This is the page you see after completing registration or login.</p>
+     <button class="button" onclick="window.location.href='Home.html'">Go to Health Care Center </button>
+  </div>
+
+  <script>
+    // Check login session
+    const userName = localStorage.getItem("loggedInUser");
+
+    if (userName) {
+      document.getElementById("welcomeText").textContent = `Welcome, ${userName}! 🎉`;
+    } else {
+      // if no login, send back to login page
+      window.location.href = "login.html";
+    }
+
+    // Logout function
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login.html"; // redirect to login page
+    }
+  </script>
+
+</body>
+</html>

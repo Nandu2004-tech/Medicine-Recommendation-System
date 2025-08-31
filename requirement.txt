@@ -1,0 +1,9 @@
+.\.venv\Scripts\activate
+
+
+
+pip install pandas
+
+pip install numpy
+pip install flask
+pip install scikit-learn==1.5.0

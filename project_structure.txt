@@ -1,0 +1,43 @@
+Medicine Recommendation System
+│
+├── .ipynb_checkpoints
+│   └── medicine.ipynb
+│
+├── .venv
+│
+├── datasets
+│   ├── .ipynb_checkpoints
+│   ├── description.csv
+│   ├── diets.csv
+│   ├── medications.csv
+│   ├── medicine.ipynb
+│   ├── precautions_df.csv
+│   ├── Symptom-severity.csv
+│   ├── symtoms_df.csv
+│   ├── Training.csv
+│   ├── Untitled.ipynb
+│   └── workout_df.csv
+│
+├── models
+│   └── svc.pkl
+│
+├── static
+│   └── img.png
+│
+├── templates
+│   ├── about.html
+│   ├── blog.html
+│   ├── contact.html
+│   ├── developer.html
+│   ├── Home.html
+│   ├── index.html
+│   ├── login.html
+│   ├── logo.png
+│   ├── logout.html
+│   ├── Nextpage.html
+│   └── registration.html
+│
+├── main.py
+│
+├── External Libraries
+└── Scratches and Consoles

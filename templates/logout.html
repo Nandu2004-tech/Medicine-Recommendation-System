@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+    }
+    button {
+      width: 60%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .link {
+      margin-top: 15px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .link:hover {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>You have been logged out ✅</h2>
+    <button onclick="window.location.href='login.html'">Login Again</button>
+    <a href="registration.html" class="link">New user? Register here</a>
+  </div>
+
+  <script>
+    // Clear session on logout page load
+    localStorage.removeItem("loggedInUser");
+  </script>
+
+</body>
+</html>
