@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- jsPDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #2575fc;
+      margin-bottom: 10px;
+    }
+    h2 {
+      border-bottom: 2px solid #6a11cb;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      color: #6a11cb;
+    }
+    h3 {
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+    ul {
+      margin: 5px 0 0 20px;
+    }
+
+    .skills, .non-tech, .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .skills span, .non-tech span, .hobbies span {
+      background: #e0f7fa;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+    .skills span:hover, .non-tech span:hover, .hobbies span:hover {
+      background: #b2ebf2;
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    .contact a {
+      color: #2575fc;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      color: #6a11cb;
+    }
+    .contact i {
+      margin-right: 5px;
+    }
+
+
+
+
+
+    @media (max-width: 600px) {
+      .skills, .non-tech, .hobbies {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>KHETHAVATH NANDU</h1>
+
+    <!-- Contact Section -->
+    <div class="contact">
+      <a href="tel:+919505375215"><i class="fas fa-phone"></i> +91-9505375215</a> |
+      <a href="mailto:knandunayak@gmail.com"><i class="fas fa-envelope"></i> knandunayak@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/khethavath-nandu-324856297" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+      <a href="https://github.com/Nandu2004-tech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+
+    <div class="section">
+      <h2>Objective</h2>
+      <p>Software Engineer passionate about designing and building innovative, scalable, and data-centric systems. Committed to delivering high-quality solutions that prioritize customer experience and thrive in cross-disciplinary environments.</p>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><b>BTech in Computer Science and Engineering</b>, Auroras Technological and Research Institute, JNTU Hyderabad (2022 – Present) - GPA: 8.5</li>
+        <li><b>Intermediate (12th)</b>, TSWR School & Junior College for Boys (2020 – 2022) - 89.4%</li>
+        <li><b>High School</b>, ZPHS High School, Kadpal (2020) - GPA: 10.0</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <span>Python</span><span>C</span><span>SQL</span><span>HTML</span><span>CSS</span>
+        <span>Pandas</span><span>Numpy</span><span>Scikit-learn</span><span>Matplotlib</span>
+        <span>Power BI</span><span>Excel</span><span>PowerPoint</span><span>Tableau</span>
+        <span>MySQL</span><span>PyCharm</span><span>Jupyter Notebook</span><span>VS Code</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Non-Technical Skills</h2>
+      <div class="non-tech">
+        <span>Communication</span><span>Time Management</span><span>Leadership</span><span>Teamwork</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <h3>AI Powered Sign Language Interpreter</h3>
+      <ul>
+        <li>Translated sign language into text using computer vision & deep learning.</li>
+        <li>Developed with Python & OpenCV, trained deep learning model on gesture datasets.</li>
+        <li>Achieved real-time translation with high accuracy.</li>
+        <li><b>Tools:</b> Python, OpenCV, TensorFlow, Jupyter Notebook</li>
+      </ul>
+
+
+
+
+
+
+      <h3>AI Powered Personal Health Assistant With Smart Symptom Checker</h3>
+      <ul>
+        <li>Provides users with a reliable, intelligent, and accessible tool to monitor health, assess symptoms, and offer personalized guidance.</li>
+        <li>AI system analyzes user-input symptoms and predicts possible health conditions with a user-friendly interface.</li>
+        <li>Helps users make informed health decisions without immediate dependence on a doctor.</li>
+        <li><b>Tools:</b> Python, Jupyter Notebook, HTML, CSS, Node.js, Numpy, Pandas, Flask, Scikit-learn</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Internship</h2>
+      <ul>
+        <li>AI/ML with Python - Teach Maven</li>
+        <li>Cyber Security & Ethical Hacking - Codetech IT Solutions Pvt.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Ethical Hacking – Remark Skill Technical Workshop</li>
+        <li>Red Hat Linux Administration – ITZ Technologies</li>
+        <li>AI/ML - Teach Maven</li>
+        <li>UI Design Flutter and DevOps - SDVVLCAD Center</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Hobbies</h2>
+      <div class="hobbies">
+        <span>Playing Chess</span><span>Listening to Music</span><span>Street Dance</span>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
